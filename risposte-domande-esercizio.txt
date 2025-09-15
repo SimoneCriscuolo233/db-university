@@ -56,3 +56,10 @@ AVG(vote) AS media_voto_esami
 FROM exam_student 
 GROUP BY exam_id 
 ORDER BY exam_id;
+
+4. Contare quanti corsi di laurea ci sono per ogni dipartimento 
+SELECT department_id, 
+COUNT(*) AS num_corsi 
+FROM degrees 
+GROUP BY department_id 
+ORDER BY department_id;
