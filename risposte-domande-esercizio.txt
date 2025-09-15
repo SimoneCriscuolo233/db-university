@@ -49,3 +49,10 @@ COUNT(*) AS totale_iscritti
 FROM students 
 GROUP BY YEAR(enrolment_date) 
 ORDER BY anno;
+
+3. Calcolare la media dei voti di ogni appello d'esame  
+SELECT exam_id,  
+AVG(vote) AS media_voto_esami 
+FROM exam_student 
+GROUP BY exam_id 
+ORDER BY exam_id;
