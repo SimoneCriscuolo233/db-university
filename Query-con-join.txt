@@ -70,4 +70,5 @@ SELECT `students`.`id` AS `student_id`,
 FROM `exam_student`
 JOIN `students` ON `exam_student`.`student_id` = `students`.`id`
 GROUP BY `students`.`id`, `students`.`name`, `students`.`surname`, `exam_student`.`exam_id`
+HAVING MIN(`exam_student`.`vote`) >=  18
 ORDER BY `students`.`surname` ASC, `students`.`name` ASC, `exam_student`.`exam_id` ASC;
